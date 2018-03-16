@@ -1,0 +1,49 @@
+<form [formGroup]="signupform" (ngSubmit)="onsubmit()" class="pt-5">
+<div class="container mt-5">
+<div class="row">
+  <div class="col-sm-4">
+    <label >username</label>
+    <input type="text" id="username" formControlName="username">
+    <span *ngIf="!signupform.get('username').valid">please enter username</span>
+  </div>
+</div>
+<div class="row  mt-2">
+    <div class="col-sm-4">
+      <label >Email</label>
+      <input type="text" id="email" formControlName="email">
+    </div>
+  </div>
+  <div class=" mt-2" formArrayName="hobies">
+      
+        <div class=" mt-2">
+          
+          </div>
+          <br>
+          <div class="">
+              <button type="button" (click)=newhobie()>Add hobie</button>
+            </div>
+  </div>
+  <div class="row mt-2">
+      <div class="col-sm-4">
+          <button type="submit">submit</button>
+        </div>
+  </div>
+  <button class="btn mt-3" (click)="resetform()">reset</button>
+</div>
+
+</form>
+
+<div class="container" *ngIf="submit">
+<div class="sectn mt-5">
+  name: <br>
+  {{name}} <br>
+  email:<br>{{email}}<br>
+<ul>
+  Hobies are:
+  <li *ngFor="let x of hobii">{{x}}</li>
+</ul>
+
+</div>
+</div>
+
+
