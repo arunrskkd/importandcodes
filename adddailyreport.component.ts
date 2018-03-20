@@ -40,10 +40,15 @@ addNewRow() {
   control.push(this.createItem());
 }
 
+onsubmit(form:FormGroup){
+  console.log(form.value)
+}
 
 createItem(): FormGroup {
   return this.fb.group({
-    name: '',
+    description: '',
+    manpower:'',
+    greenhouse:''
    
   });
 }
@@ -66,3 +71,5 @@ export class MyModel {
   value: Date;
 
 }
+
+
