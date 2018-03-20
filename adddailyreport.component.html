@@ -1,5 +1,5 @@
 <h3>Daily report</h3>
-<form [formGroup]="heroForm" >
+<form [formGroup]="heroForm" (ngSubmit)="onsubmit(heroForm)">
 
 <div class="card">
   <div class="row">
@@ -17,27 +17,34 @@
 </div>
 <div class="card mt-4" formArrayName="itemRows" >
   <h5>Add report</h5>
-  <div class="row" *ngFor="let itemrow of heroForm.get('itemRows').controls; let i=index"  [formGroupName]="i">
+  <div class="row mt-5" *ngFor="let itemrow of heroForm.get('itemRows').controls; let i=index"  [formGroupName]="i">
       <div class="col-sm-4">
         <label for="">Slno</label>
-        <input type="text" formControlName="name" >  
+        <input type="text" value="{{i+1}}" >  
       </div>
-      <!-- <div class="col-sm-4">
+      <div class="col-sm-4">
         <label for="">Description</label>
-          <input type="text" >  
+          <input type="text" formControlName="description">  
         </div>
         <div class="col-sm-4">
           <label for="">Manpoer used</label>
-            <input type="text">  
+            <input type="text" formControlName="manpower">  
           </div>
           <div class="col-sm-4">
-             <button class="btn btn-danger">Del</button>
-              </div> -->
+            <label for="">Remarks</label>
+              <input type="text" formControlName="greenhouse">  
+            </div>
+          <div class="col-sm-4">
+             <button class="btn btn-danger" (click)="deleteRow(i)">Del</button>
+              </div>
   </div>
-  <div class="row">
+  <div class="row mt-5">
       <div class="col-sm-4">
           <button class="btn btn-primary" type="button" (click)="addNewRow()">Add</button>
            </div>
+           <div class="col-sm-4">
+            <button class="btn btn-primary" type="submit" >Submit</button>
+             </div>
     </div>
 
 
