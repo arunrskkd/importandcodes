@@ -210,3 +210,30 @@ class baseModel {
             }
             let accounts = new time(15,25);
             accounts.getName();
+	    
+	    
+	       <script>
+    const companies = [{ name:'company one',catogery:'finance',start:1972},
+    { name:'company two',catogery:'finance',start:1932},
+    { name:'company three',catogery:'finance',start:1932},
+    { name:'company four',catogery:'finance',start:1942},
+    { name:'company five',catogery:'finance',start:1952},
+    { name:'company six',catogery:'finance',start:1975}
+    
+       ];
+      
+
+    // companies.forEach(function(company,index){
+    //     console.log(company.name);
+    // });
+
+//   const companynames = companies.map(cmpname => 
+//     console.log(`${cmpname.name} started in year ${cmpname.start}`)
+//   );
+
+
+        const ages = companies.map( company => Math.sqrt(companies.start));
+
+        console.log(ages)
+
+    </script>
