@@ -1,0 +1,6 @@
+browser speaks
+
+setTimeout(function() {
+  var text = new SpeechSynthesisUtterance("LOLOLOLOLOLOLOLOL"); 
+  speechSynthesis.speak(text);
+}, 600000);
