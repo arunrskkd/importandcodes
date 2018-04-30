@@ -48,3 +48,4 @@ load different iages on different screen size
   <source media="(min-width: 465px)" srcset="img_white_flower.jpg">
   <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
 </picture>
+<img src="/images/me.jpg" alt="Image of me" srcset="/images/me-1x.jpg 1x, /images/me-2x.jpg 2x" />
