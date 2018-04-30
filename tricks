@@ -49,3 +49,8 @@ load different iages on different screen size
   <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
 </picture>
 <img src="/images/me.jpg" alt="Image of me" srcset="/images/me-1x.jpg 1x, /images/me-2x.jpg 2x" />
+
+
+
+hack trough 3rd party css
+https://jakearchibald.com/2018/third-party-css-is-not-safe/
