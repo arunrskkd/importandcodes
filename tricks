@@ -41,3 +41,10 @@ resposive code intead of boostrap
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
+
+load different iages on different screen size
+<picture>
+  <source media="(min-width: 650px)" srcset="img_pink_flowers.jpg">
+  <source media="(min-width: 465px)" srcset="img_white_flower.jpg">
+  <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+</picture>
