@@ -34,3 +34,10 @@ elem.scrollIntoView({
 html {
   scroll-behavior: smooth;
 }
+
+
+resposive code intead of boostrap
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
