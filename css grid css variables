@@ -1,0 +1,92 @@
+<style>
+    :root {
+      --primary: rgb(233, 213, 31);
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      /* grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); */
+      grid-gap: 5px;
+      /* grid-auto-rows: 200px; */
+      grid-auto-rows: minmax(100px, auto);
+    }
+
+    .wrapper>div:nth-child(odd) {
+      background: var(--primary);
+    }
+
+    .wrapper>div:nth-child(even) {
+      background: black;
+    }
+
+    .new {
+      grid-column: 2/3;
+      grid-row: 1/3;
+      background: red !important;
+    }
+
+    .new3 {
+      grid-column: 1/2;
+      background: rgb(54, 131, 80) !important;
+    }
+
+    .new3 {
+      grid-column: 3/4;
+      background: rgb(71, 121, 179) !important;
+    }
+
+    .wrapper2 {
+      display: grid;
+      grid-template-areas: 'sect sect sect1' 'sect sect sect2';
+    }
+    @media (max-width:500px){
+      .wrapper2 {
+    
+      grid-template-areas: 'sect sect ' 'sect1 sect2';
+    }
+    }
+    .sect{
+      grid-area: sect;
+      background: blueviolet;
+    }
+    .sect1{
+      grid-area: sect1;
+      background: lavenderblush;
+    }
+    .sect2{
+      grid-area: sect2;
+      background: lightblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="new">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ea eni. </div>
+    <div class="new2">2Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    <div class="new3">3Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ea enim . </div>
+    <div>4Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ea enim praesentium, consequatur expedita obcaecati unde
+      aut cupiditate quos dolor. </div>
+    <div>5Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ea enim praesentium, consequatur expedita obcaecati unde
+      aut cupiditate quos dolor. </div>
+    <div>6Lorem ipsum dolor sit amet consectetur adipisicing elit </div>
+    <div>7Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ea enim praesentium, consequatur expedita obcaecati unde
+      aut cupiditate quos dolor. </div>
+    <div>8Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ea enim praesentium, consequatur expedita obcaecati unde
+      aut cupiditate quos dolor. </div>
+
+
+  </div>
+  <div class="wrapper2">
+    <div class="sect">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, tempora?
+    </div>
+    <div class="sect1">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, tempora?
+    </div>
+    <div class="sect2">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, tempora?
+    </div>
+
+  </div>
