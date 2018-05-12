@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Hello, world!</title>
+  <style>
+    .wrapper{
+      display: grid;
+      grid-gap: 5px;
+      /* grid-template-columns: repeat(2,1fr); */
+      grid-template-areas:
+    'one two '
+    'one two'
+    'three two '
+    'three four';
+
+    }
+    .wrapper>.sect:nth-child(odd){
+      background: rgb(126, 120, 120);
+    }
+    .wrapper>.sect:nth-child(even){
+      background: rgb(235, 181, 181);
+    }
+    .wrapper>.sect:nth-child(1){
+      grid-area: one; 
+    }
+    .wrapper>.sect:nth-child(2){
+      grid-area: two; 
+    }
+    .wrapper>.sect:nth-child(3){
+      grid-area: three; 
+    }
+    .wrapper>.sect:nth-child(4){
+      grid-area: four; 
+    }
+    @media(max-width:1200px){
+      .wrapper{
+      grid-template-areas:
+    ' one two'
+    ' three four'
+;
+      }
+
+    }
+    @media(max-width:500px){
+      .wrapper{
+      grid-template-areas:
+    ' one two three four'
+;
+
+    }
+    }
+  </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="sect item1">
+1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima dolores nisi culpa a tempore. Illo expedita magni officia eveniet architecto fuga laborum molestiae officiis placeat.
+
+            </div>
+            <div class="sect item2">
+2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequatur voluptatum obcaecati. Consequatur earum reprehenderit cumque ut! Ut maiores voluptatem, consequuntur delectus deleniti sapiente iste?
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo aut vitae neque nemo nisi? Iure adipisci velit tenetur iste earum fugit aut culpa qui dolores?
+            </div>
+            <div class="sect item3">
+3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, id, est perspiciatis iure laudantium saepe modi consequatur, eaque cupiditate consectetur at veritatis assumenda repudiandae! Voluptas?
+
+            </div>
+            <div class="sect item4">
+
+4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis illo vel, magni architecto repellendus modi deserunt illum totam maxime perspiciatis quibusdam molestiae provident iusto. Quod.  
+                  </div>
+        </div>
+    </div>
+
+
+
+
+  <!-- Optional JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
