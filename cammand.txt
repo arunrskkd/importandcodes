@@ -2,3 +2,6 @@ angular ui sites --https://www.primefaces.org/ prime ng,angular material,angular
 remove directory cmd -sudo rm -rf features/
 
 git remote add origin remote repository URL
+
+
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p    (run this for watch error)
