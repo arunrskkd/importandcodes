@@ -237,3 +237,210 @@ class baseModel {
         console.log(ages)
 
     </script>
+
+
+ ......................//clear form............................................
+
+$('#formvalidation').reset();
+
+......................//can be even used when li is an appended element.......... 
+
+$("#on").on("click","li",function(){   
+	
+
+});
+
+......................//each function............................................
+
+$("button").click(function(){
+    $("li").each(function(){
+        alert($(this).text())
+    });
+});
+
+............................................//oops js......................
+
+  
+
+ prototype = {
+            toArray: function () {
+                return this.data;
+            },
+            range: function (index, count) {
+                return new Query(this.data.slice(index, index + count));
+            },
+            skip: function (count) {
+                return new Query(this.data.slice(count));
+            },
+            take: function (count) {
+                return new Query(this.data.slice(0, count));
+            },
+            select: function (selector) {
+                return new Query(map(this.data, selector));
+            }
+            };
+
+    prototype.toArray();
+
+...................................//is function...................................
+
+    if ($("p").parent().is("div")) {
+    	alert("Parent of p is div"); 
+	}
+
+	$(selector).is(selectorElement)  //selectorElement can be .new ,#new,p,div,a,span 
+
+...................................//remove attribute function...................................
+
+ $(".vchiddensect").removeAttr( "required" );
+
+
+ ...................................//ajax load js wont work...................................
+
+ have to initialise js once more inside ajax sucess function
+
+ ...................................//append js wont work on appended element...................................
+
+  have to initialise js once more inside append function
+  or onclick should be used inorder to work events on appended elements 
+   ...................................//usefull plugins...................................
+
+   refer Altair documentaion http://ce.accessia.fr/documentation/#Getstarted
+
+
+   ................................//for in loop................................
+
+    var person = {fname:"John", lname:"Doe", age:25}; 
+    
+    var text = "";
+    var x;
+    for (x in person) {
+        text += person[x] + " ";
+    }
+
+     example 2:   for (var keys in assets_sel) {
+            if (assets_sel[keys] == jsondata[key].id) {
+                 sucess="true";  break;
+            }
+           
+        }
+
+................................//jquery form reset................................
+
+    $(".form_validation").each(function(){
+            $(this).trigger("reset");
+        });
+
+
+................................//jquery inarray function to check element is in array or not.......................
+
+        var input = prompt("What state are you in?");
+        var lower = input.toLowerCase();
+        var categories = [ 
+            "ma", 
+            "ny", 
+            "ct", 
+            "ri"
+        ];
+        var found = $.inArray(lower, categories);
+        if (found > -1) {
+            alert("Cool!");
+            }
+        else {
+            alert("Oh no!");
+            }
+
+
+................................//jquery inarray function to check element is in array or not.......................
+        var assets_sel=["ma","ny", "ct", "ri"];
+
+            for (var keys in assets_sel) {
+                        if (assets_sel[keys] == jsondata[key].id) {
+                             sucess="true";  break;
+                        }
+                        else{
+                            sucess="false";
+                        }
+                    }
+
+
+
+
+................................//jquery variable selector.......................
+                var assets_sel= [];
+              for(var m=5;m>=0;m--){
+
+                    var select_assets=$("#assets__"+m).val();
+                    assets_sel.push(select_assets);
+
+                }
+                var y =  (assets_sel.length>0);
+
+................................//jquery selectize.......................
+
+                  var selectize = $("#assets__"+count)[0].selectize;
+       selectize.clear();
+       selectize.clearOptions();
+       selectize.renderCache['option'] = {};
+       selectize.renderCache['item'] = {};
+
+       selectize.addOption(new_value_options);
+
+
+................................//jquery selectize.......................
+
+
+
+ var Person = function(name){
+                this.name=name;
+            }
+            Person.prototype.hideelement = function(){
+                console.log(this.name);
+                setTimeout(function(){
+                       document.getElementById("+this.name+").style.display = "none";
+
+
+                 }, 3000);
+                 
+                }
+
+
+
+//errror skipping
+
+                 console.log("asd");
+             try {
+                      consosle.log("asd");
+                    } catch (error) {
+                        // Handle the error
+                        console.log(error.message);
+                    }
+                      console.log("finish");
+
+                       throw new Error("I hungry. Fridge empty.");
+
+//es6
+
+class baseModel {
+              constructor(options , data) { // class constructor
+                    this.name = 'Base'
+                this.url = 'http://azat.co/api'
+                    this.data = data
+                this.options = options
+                }
+
+                getName() { // class method
+                    console.log(`Class name: ${this.name}  ${this.data}`)
+                }
+            }
+            class time extends baseModel {
+                constructor(options , data){
+                     super(options , data) ;
+                }
+
+            
+
+
+            }
+            let accounts = new time(15,25);
+            accounts.getName();
