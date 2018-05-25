@@ -1,0 +1,35 @@
+create Style.css
+/*
+Theme Name:confidenttheme.
+Theme URI: Your Theme's URI
+Description: A brief description.
+Version: 1.0
+Author: You
+Author URI: Your website address.
+*/
+
+create index.php
+<?php
+/*
+Template Name: coimbatore villas
+*/
+?>
+
+create new template
+<?php
+ /* Template Name: CustomPageT1 */
+get_header(); ?>
+
+
+<?php get_footer(); ?>
+
+
+create header.php
+<?php wp_head();?>
+
+create footer.php
+<?php wp_footer();?>
+
+select template in page
+
+<?php bloginfo('template_url'); ?>  for linking css images etc
