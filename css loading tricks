@@ -1,0 +1,13 @@
+
+for non loaded images
+img:empty {
+    width: 100px;
+    height: 20px;
+    background: url(loading.gif);
+}
+
+Here's an example of how we can use rel="preload" to load and apply a CSS file asynchronously (in a browser that supports it):
+
+<link rel="preload" href="mystyles.css" as="style" onload="this.rel='stylesheet'">
+
+for js async and defer
