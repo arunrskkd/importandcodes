@@ -66,3 +66,36 @@ reduce font size using js
               var val    = f_size.replace(/\d/g,''); // px
               elems[i].style.fontSize = (+numb * 8 / 10) + val;    
           }
+
+
+telphone code 
+ $(".cphone").intlTelInput({
+          // allowDropdown: false,
+          // autoHideDialCode: false,
+          // autoPlaceholder: "on",
+          // dropdownContainer: "body",
+          // excludeCountries: ["us"],
+          // geoIpLookup: function(callback) {
+          //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+          //     var countryCode = (resp && resp.country) ? resp.country : "";
+          //     callback(countryCode);
+          //   });
+          // },
+          // initialCountry: "auto",
+           nationalMode: false,
+          // numberType: "MOBILE",
+          //onlyCountries: ['in', 'uae', 'ch', 'ca', 'do'],
+                  preferredCountries: ['in','ae' ,'us','gb','kw','om','sa','qa'],
+          
+      
+          // separateDialCode: true,
+         // utilsScript: "http://www.skylinebuilders.com/campaigns/wp-content/themes/skyline/js/utils.js"
+        });
+        $(".clphone").intlTelInput({
+           nationalMode: false,
+          preferredCountries: ['us','ae' ,'in','gb','kw','om','sa','qa'],
+          });
+              <!-- telephone code -->
+    <script src="js/intlTelInput.js"></script>
+      <!-- tel no -->
+    <link rel="stylesheet" href="css/intlTelInput.css">
