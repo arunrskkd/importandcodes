@@ -54,3 +54,15 @@ load different iages on different screen size
 
 hack trough 3rd party css
 https://jakearchibald.com/2018/third-party-css-is-not-safe/
+
+
+
+reduce font size using js
+  // reduce font-size function
+          var elems = document.querySelectorAll('*');
+          for (var i=elems.length; i--;) {
+              var f_size = getComputedStyle(elems[i]).fontSize;
+              var numb   = f_size.replace(/\D/g,''); // the number
+              var val    = f_size.replace(/\d/g,''); // px
+              elems[i].style.fontSize = (+numb * 8 / 10) + val;    
+          }
