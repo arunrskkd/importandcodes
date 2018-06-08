@@ -444,3 +444,261 @@ class baseModel {
             }
             let accounts = new time(15,25);
             accounts.getName();
+
+
+$(document).ready(function() {
+    $('.gallery-slider').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [{
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        }]
+    });
+
+    function goToByScroll(id) {
+        id = id.replace("link", "");
+        $('html,body').animate({
+            scrollTop: $("#" + id).offset().top
+        }, 'slow');
+    }
+    $(".enquirelink").click(function(e) {
+        e.preventDefault();
+        goToByScroll("enquire");
+    });
+    $(function() {
+        $("#location").val('Kochi').change();
+        $('#projectselector').change(function() {
+            $('.projects').hide();
+            $('#' + $(this).val()).show();
+            $("#location").val($(this).find('option:selected').text()).change();
+        });
+    });
+    $('.testimonials-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 2,
+        centerMode: true,
+        adaptiveHeight: true,
+        centerPadding: '35%',
+        arrows: false,
+        autoplay: true,
+        dots: true,
+        autoplaySpeed: 4000,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 1400,
+            settings: {
+                centerPadding: '30%',
+            }
+        }, {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                centerMode: false,
+            }
+        }, {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: false,
+            }
+        }]
+    });
+    $('.banner-slider').slick({
+        arrows: false,
+        autoplay: true,
+        dots: true,
+        autoplaySpeed: 4000,
+        pauseOnHover: false
+    });
+    $('.enquirelink').click(function() {
+        if ($(this).attr('rel') != undefined) {
+            $('#project').val($(this).attr('rel'));
+            $('#projects').val($(this).attr('rel'));
+            $('#pro').val($(this).attr('rel'));
+        } else {
+            $('#project').val('None');
+        }
+    });
+    var loc = [{
+        locID: 1,
+        name: 'Kochi'
+    }, {
+        locID: 2,
+        name: 'Kollam'
+    }, {
+        locID: 3,
+        name: 'Kottayam'
+    }, {
+        locID: 4,
+        name: 'Kozhikode'
+    }, {
+        locID: 5,
+        name: 'Kannur'
+    }, {
+        locID: 6,
+        name: 'Pala'
+    }, {
+        locID: 7,
+        name: 'Thiruvalla'
+    }, {
+        locID: 8,
+        name: 'Thrissur'
+    }, {
+        locID: 9,
+        name: 'Trivandrum'
+    }]
+    var prop = [{
+        locID: 'Kochi',
+        propID: 1,
+        name: 'SKYLINE Ranch - Tripunithura, Kochi'
+    }, {
+        locID: 'Kochi',
+        propID: 2,
+        name: 'Skyline Aristocrat - PT Usha Road, Kochi'
+    }, {
+        locID: 'Kochi',
+        propID: 3,
+        name: 'Skyline Spectra - Seaport-Airport Road, Kochi'
+    }, {
+        locID: 'Kochi',
+        propID: 4,
+        name: 'Skyline Synergy - Cheranalloor, Kochi'
+    }, {
+        locID: 'Kochi',
+        propID: 5,
+        name: 'The Legend Sky Mansions - Kaloor, Kochi'
+    }, {
+        locID: 'Kochi',
+        propID: 6,
+        name: 'Skyline 24 Carat - Elamakkara, Kochi'
+    }, {
+        locID: 'Kochi',
+        propID: 7,
+        name: 'Skyline Brown - Kakkanad, Kochi'
+    }, {
+        locID: 'Kochi',
+        propID: 8,
+        name: 'Skyline Opus - Palarivattom, Kochi'
+    }, {
+        locID: 'Kannur',
+        propID: 9,
+        name: 'SKYLINE UPPER CREST - Mele Chovva, Kannur'
+    }, {
+        locID: 'Kollam',
+        propID: 7,
+        name: 'SKYLINE Marbella - Kadappakada, Kollam'
+    }, {
+        locID: 'Kottayam',
+        propID: 7,
+        name: 'SKYLINE Rhythm - Devalokam, Kottayam'
+    }, {
+        locID: 'Kottayam',
+        propID: 7,
+        name: 'SKYLINE Oasis - Sankranthi, Kottayam'
+    }, {
+        locID: 'Kottayam',
+        propID: 7,
+        name: 'Skyline Green Turf - Mangaman, Kottayam'
+    }, {
+        locID: 'Kottayam',
+        propID: 7,
+        name: 'Skyline Palazzo - Devalokam, Kottayam'
+    }, {
+        locID: 'Kottayam',
+        propID: 7,
+        name: 'Skyline Pearl - Kanjikuzhy Junction, Kottayam'
+    }, {
+        locID: 'Kottayam',
+        propID: 7,
+        name: 'Skyline Exotica - Devalokam, Kottayam'
+    }, {
+        locID: 'Kozhikode',
+        propID: 7,
+        name: 'SKYLINE GRAND TERRACE - Off Mavoor Road Junction, Calicut'
+    }, {
+        locID: 'Kozhikode',
+        propID: 7,
+        name: 'SKYLINE BLUE VISTA - Puthiyangadi, Calicut'
+    }, {
+        locID: 'Pala',
+        propID: 7,
+        name: 'SKYLINE Grace - Near St. Thomas Cathedral, Pala'
+    }, {
+        locID: 'Thiruvalla',
+        propID: 7,
+        name: 'SKYLINE Edge - Thirumoolapuram, Thiruvalla'
+    }, {
+        locID: 'Thrissur',
+        propID: 7,
+        name: 'Zenith - Nellikunnu, Thrissur'
+    }, {
+        locID: 'Thrissur',
+        propID: 7,
+        name: 'Avenue Suites - Avenue Road, Thrissur'
+    }, {
+        locID: 'Trivandrum',
+        propID: 7,
+        name: 'Campus Heights - Sreekaryam, Trivandrum'
+    }, {
+        locID: 'Trivandrum',
+        propID: 7,
+        name: 'Cambridge - Mukkolakkam, Trivandrum'
+    }]
+
+    function filterByProperty(arr, prop, value) {
+        return $.grep(arr, function(item) {
+            return item[prop] == value
+        });
+    }
+
+    function populateSelect(el, items) {
+        el.options.length = 0;
+        if (items.length > 0)
+            el.options[0] = new Option('Choose Your project ', '');
+        $.each(items, function() {
+            el.options[el.options.length] = new Option(this.name, this.value);
+        });
+    }
+    populateSelect($('#location').get(0), $.map(loc, function(type) {
+        return {
+            name: type.name,
+            value: type.name,
+            rel: type.locID
+        }
+    }));
+    $('#location').bind('change', function() {
+        var theModels = filterByProperty(prop, 'locID', this.value);
+        populateSelect($('#projects').get(0), $.map(theModels, function(make) {
+            return {
+                name: make.name,
+                value: make.name
+            }
+        }));
+        $('#projects').trigger('change');
+        if ($("#projectselector").find('option:selected').text() != $("#location").find('option:selected').text()) {
+            var namestr = $('#location option:selected').val();
+            var devname = namestr.toLowerCase() + '-project';
+            console.log(devname);
+            $('#projectselector').val(devname).change();
+        }
+    });
+});
+$(".cphone").keypress(function(e) {
+    if (e.which != 43 && e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        return false;
+    }
+});
