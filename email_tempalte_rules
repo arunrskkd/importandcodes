@@ -1,0 +1,19 @@
+no standardised code...take differently in different platforms
+so use tables/spans etc
+table properties width height border="0" cellspacing="0" cellpadding="0"  can be used
+start new section with new table else same alignment follows 
+every table should hav tr and td inside that only new table should be defined
+inline style prefered
+onli one class per element like class="onliclass"
+colspan rowspan wont take
+header statrts with 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>Responsive E-mail Template</title>
+  <style type="text/css">
+     <tr><td>&nbsp;</td></tr>
