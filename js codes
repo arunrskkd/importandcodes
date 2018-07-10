@@ -702,3 +702,76 @@ $(".cphone").keypress(function(e) {
         return false;
     }
 });
+
+
+//jquery form  validation-------------------------------------------
+
+   $(document).ready(function(){
+            var medium = getQueryStringValue("utm_medium")
+            var source = getQueryStringValue("utm_source")
+           
+             $(".utmsource").attr("value",source);
+            $(".utmmedium").attr("value",medium);
+          
+          
+            $('input[type="submit"]').click(function(event){
+              
+                event.preventDefault();
+                seterrormessage(this);
+                
+            })
+
+           
+        });
+
+        // validate required
+        function seterrormessage(element){
+                var submitform = true;
+                $(element).parents("form").find(".form-control[required]").each(function(){
+                    if($(this).val() == ""){
+                        if(!$(this).hasClass("errorform")){
+                            $(this).addClass("errorform");
+                        $(this).after("<span style='color:red;font-size:14px'>This field is required</span>")
+                     
+                        }
+                        submitform = false;
+                       
+                    }
+                    
+                    else{
+                        if($(this).hasClass("errorform")){
+                            $(this).removeClass("errorform");
+                            $(this).siblings('span').remove();
+                        }
+                    }
+                });
+                $(element).parents("form").find(".form-control").each(function(){
+                if($(this).attr("type") == "email" ){
+                        if(!validateEmail($(this).val())){
+                            if( !($(this).siblings('span').size() > 0)){
+                                $(this).after("<span style='color:red;font-size:14px'>Please enter valid email </span>") ;
+                            }
+                         
+                            submitform = false;
+                        }
+                        else{
+                            $(this).siblings('span').remove();
+                        }
+                }
+                });
+                if(submitform == true){
+                  
+                    var form = $(element).parents("form");
+                    $(form).submit();
+                }
+            }
+
+            // validate email
+            function validateEmail(email) {
+            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+            }
+	    
+	    
+	    -----------------------------------------------------end validation
+
