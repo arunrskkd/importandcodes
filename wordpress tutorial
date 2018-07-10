@@ -18,8 +18,8 @@ Template Name: coimbatore villas
 create new template
 <?php
  /* Template Name: CustomPageT1 */
-get_header(); ?>
-
+get_header(); ?>   //header.php
+get_header('header-1');   //header-1.php
 
 <?php get_footer(); ?>
 
