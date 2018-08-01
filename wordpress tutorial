@@ -33,3 +33,80 @@ create footer.php
 select template in page
 
 <?php bloginfo('template_url'); ?>  for linking css images etc
+
+<!-- specifiying image path -->
+
+<img src="<?php bloginfo('template_url')  ?>/images/img.jpg" >
+
+
+<!-- getting the advanced custom fields -->
+
+<?php    
+  echo   get_field('head_title');
+?>
+
+<!-- getting the advanced custom fields  of a particular page-->
+
+<?php    
+  echo   get_field('head_title',pageid);
+?>
+
+<!-- getiing the act fields of child pages of a parent page -->
+
+<?php   $properties = get_children(array('post_parent' => $post->ID,'numberposts' => -1,'post_type'   => 'page','post_status' => 'publish'  ));  ?>
+
+<?php foreach($properties as $property){
+
+    echo get_field('status',$property->ID);
+
+}
+?>
+
+<!-- getting the template name of current page -->
+
+<?php  
+    echo basename(get_page_template());   //gives page.php
+
+?>
+
+<!-- getiing page title of current page -->
+
+<?php 
+    global $post;
+    echo $post->post_title;
+?>
+<?php wp_title(''); ?>
+<!-- getting current page permalink of wordpress -->
+
+<?php  get_permalink(); ?>
+
+
+<!-- wordpress doshortcode -->
+
+<?php echo do_shortcode('[contact-form-7 id="1443" title="Enquire"]'); ?>
+
+
+<!-- getting parent page -->
+
+ <?php  $parent =  get_page($property->post_parent); ?>
+
+
+<!-- using repeater -->
+<? $list_amenities = get_field('list_amenities'); ?>
+<? if(in_array('Smoke Free',$list_amenities)) { ?>
+<!-- other functions -->
+
+explode/implode functions
+
+basename();
+
+ucwords();
+
+
+ if(count($ongoing_properties)>0){ 
+
+<!-- urls in wordpress -->
+
+   var templateUrl = '<?php bloginfo('template_url'); ?>';
+        var siteUrl     = '<?php bloginfo('url'); ?>';
+        var pageNameUrl = '<? echo basename(get_permalink()); ?>';
