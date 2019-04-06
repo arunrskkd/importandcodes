@@ -40,3 +40,12 @@ css property     clip-path: polygon(100% 100%,100% 0,-400% 0);
 	  
 	  
 http://www.landmarkmlp.com/js-plugin/owl.carousel/index.html
+
+1.after element for styling
+
+2.css calc property  width:calc(100% - 20px);
+
+3.css rem property for more responsiveness.
+
+4.css before content of data. eg content: attr(title);  
+
