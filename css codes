@@ -49,3 +49,4 @@ http://www.landmarkmlp.com/js-plugin/owl.carousel/index.html
 
 4.css before content of data. eg content: attr(title);  
 
+5.pointer-events: none;   for click beneth a position absolute section.(click underlying section)
